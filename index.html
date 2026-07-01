@@ -25,7 +25,6 @@ nav{
     height:70px;
     background:#111827;
     display:flex;
-    justify-content:space-between;
     align-items:center;
     padding:0 40px;
     box-shadow:0 5px 20px rgba(0,0,0,.5);
@@ -144,19 +143,33 @@ refresh the page or try another source.
 
 const player = document.getElementById("player");
 
-function toggleFullscreen(){
-
-if(!document.fullscreenElement){
-
-player.requestFullscreen();
-
-}else{
-
-document.exitFullscreen();
-
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        player.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
 }
 
-}
+// Center the iframe when entering fullscreen
+document.addEventListener("fullscreenchange", () => {
+    if (document.fullscreenElement) {
+        player.style.display = "flex";
+        player.style.alignItems = "center";
+        player.style.justifyContent = "center";
+        player.style.background = "#000";
+
+        const iframe = player.querySelector("iframe");
+        iframe.style.width = "100%";
+        iframe.style.height = "100vh";
+        iframe.style.maxHeight = "100vh";
+    } else {
+        player.style.display = "block";
+
+        const iframe = player.querySelector("iframe");
+        iframe.style.height = "75vh";
+    }
+});
 
 </script>
 
