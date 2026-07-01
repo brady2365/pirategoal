@@ -1,76 +1,172 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="icon" type="image/x-icon" href="https://kora.depoooo.com/wp-content/uploads/2026/02/cropped-tv-koora.live-4-2-scaled-2.webp" />
-    <meta content="width=device-width,minimum-scale=1,initial-scale=1" name="viewport" />
-    <title>
-      PirateGoal
-    </title>
-    <link href="https://kora.depoooo.com/wp-content/plugins/AlbaPlayer//assets/css/style.css?v=11.1" rel="stylesheet" />
-    <style>
-      :root{ --aplr-primary:#001a33; --aplr-secondary:#5a0000; --aplr-btn-rds:40px; --aplr-rf-cr:#162133; --aplr-sh-cr:#162133} .jw-wrapper::before, .plyr__video-wrapper::before, #oframeaplr-video::before, #aplr-video.video-js::before{background-image:url();background-position:top right}
-    </style>
-    <script>
-      const PlayerPoster=&#39;https://depoooo.com/wp-content/uploads/2026/02/tv-koora.live-4-2-scaled.webp&#39;;const PlayerLogo=&#39;&#39;;const LogoPosition=&#39;top-right&#39;;
-    </script>
-    <script type="text/javascript" src="https://kora.depoooo.com/wp-content/plugins/AlbaPlayer//assets/js/albaplayer.js">
-    </script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  </head>
-  <body>
-    <div class="aplr-player-wrapper nbtn-st-2 nbtn-wd-1 nbtn-sz-s nbtn-pos-t rtl">
-      <ul class="aplr-menu">
-        <li>
-          <a class="aplr-link active" href="https://kora.depoooo.com/albaplayer/bein-2/?serv=1" role="button">          بث رئيسي
-</a>
-        </li>
-        <li>
-          <a class="aplr-link" href="https://kora.depoooo.com/albaplayer/bein-2/?serv=2" role="button">          حفيظ دراجي
-</a>
-        </li>
-        <li>
-          <a class="aplr-link" href="https://kora.depoooo.com/albaplayer/bein-2/?serv=3" role="button">          جوال
-</a>
-        </li>
-        <li>
-          <a class="aplr-link" href="https://kora.depoooo.com/albaplayer/bein-2/?serv=4" role="button">          English
-</a>
-        </li>
-        <li>
-          <a class="aplr-link" href="https://kora.depoooo.com/albaplayer/bein-2/?serv=5" role="button">          Spanish
-</a>
-        </li>
-      </ul>
-      <div class="aplr-player-content">
-        <div class="video-con embed-responsive">
-          <div class="video-con embed-responsive">
-            <script src="https://cdn.jsdelivr.xyz/gh/clappr/clappr@latest/dist/clappr.min.js">
-            </script>
-            <script src="//cdn.jsdelivr.xyz/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js">
-            </script>
-            <div id="player">
-            </div>
-            <script>
-              var player=new Clappr.Player({source:&#34;https://81cup.s3.us-east-2.amazonaws.com/max2/master.m3u8&#34;,plugins:[LevelSelector],parentId:&#34;#player&#34;,width:&#34;100%&#34;,height:&#34;100%&#34;,hideMediaControl:!0,autoPlay:!0});
-            </script>
-          </div>
-        </div>
-        <ul class="aplr-exbtns">
-        </ul>
-      </div>
-      <!-- .aplr-player-content -->
-    </div>
-    <!-- .aplr-player-wrapper -->
-    <svg class="aplrSvgIcons">
-      <symbol id="aplr-close" viewBox="0 0 320 512">
-        <path d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z">
-        </path>
-      </symbol>
-    </svg>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutGoal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0b0f17;
+    color:white;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    height:70px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#00e676;
+}
+
+.right{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    background:#00e676;
+    color:black;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 15px #00e676;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:30px;
+}
+
+.player{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    background:#111827;
+    border:2px solid #00e676;
+    box-shadow:0 0 30px rgba(0,230,118,.3);
+}
+
+.player iframe{
+    width:100%;
+    height:75vh;
+    border:none;
+}
+
+/* Floating button */
+
+.fullscreen{
+    position:absolute;
+    top:15px;
+    right:15px;
+    z-index:100;
+}
+
+.info{
+    margin-top:20px;
+    color:#9ca3af;
+    line-height:1.6;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+⚽ Fut<span>Goal</span>
+</div>
+
+<div class="right">
+
+<button onclick="toggleFullscreen()">
+⛶ Fullscreen
+</button>
+
+</div>
+
+</nav>
+
+<div class="container">
+
+<div class="player" id="player">
+
+<button class="fullscreen" onclick="toggleFullscreen()">
+⛶
+</button>
+
+<iframe
+allowfullscreen
+class="cf"
+frameborder="0"
+name="search_iframe"
+sandbox="allow-forms allow-same-origin allow-scripts"
+scrolling="no"
+src="https://w4.sportsonlline.click/channels/hd/hd1.php">
+</iframe>
+
+</div>
+
+<div class="info">
+<h2>Live Football</h2>
+<p>
+Watch live football streams in high quality. If the stream buffers,
+refresh the page or try another source.
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const player = document.getElementById("player");
+
+function toggleFullscreen(){
+
+if(!document.fullscreenElement){
+
+player.requestFullscreen();
+
+}else{
+
+document.exitFullscreen();
+
+}
+
+}
+
+</script>
+
+</body>
 </html>
-<!-- Dynamic page generated in 0.047 seconds. -->
-<!-- Cached page generated by WP-Super-Cache on 2026-07-01 19:22:23 -->
-<!-- super cache -->
